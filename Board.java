@@ -1,15 +1,49 @@
+import java.util.Scanner;
 
 public class Board
 {
-    private Piece[][] gameBoard;
-    private int turn;
+    public static boolean gameOver = false;
     
     public static void main(String[]args)
     {
+        Scanner in = new Scanner(System.in);
         Board board = new Board();
+        String player = "";
+        
+        while(!gameOver)
+        {
+            board.printBoard();
+            
+            if(board.getTurn() % 2 == 0)
+            {
+                player = "White";
+            }
+            else
+            {
+                player = "Black";
+            }
+            System.out.println("It is " + player + "'s turn. Type the piece you would like to move (ex. A6)");
+            String pos1 = in.next();
+            System.out.println("It is " + player + "'s turn. Type the postion you would like to move the piece to(ex. C6)");
+            String pos2 = in.next();
+            boolean validMove = Moves.movePiece(board.getTurn(), pos1, pos2);
+            if(validMove)//TODO isCurrentPlayerInCheck()
+            {
+                if(Moves.isOpponentInCheck())
+                {
+                    
+                }
+            }
+            gameOver = true; //TODO
+        }
+        
         board.printBoard();
+        System.out.println("Good Game! " + player + " won in " + board.getTurn() + " turns!");
     }
     
+    /**      Main Class       */
+    private Piece[][] gameBoard;
+    private int turn;
     
     public Board()
     {
@@ -40,7 +74,7 @@ public class Board
             System.out.println(getRowLetter(i));
         }
           System.out.println("---------------------------");  //TODO check size
-          System.out.println("  A B C D E F G H  ");  //TODO check size
+          System.out.println("   1  2  3  4  5  6  7  8  ");  //TODO check size
     }
     
     private String getRowLetter(int rowNumber){
@@ -100,6 +134,11 @@ public class Board
         gameBoard[0][4] = new Piece(Piece.BLACK, Piece.KING);
 
         gameBoard[7][4] = new Piece(Piece.WHITE, Piece.KING);
+    }
+    
+    public int getTurn()
+    {
+        return this.turn;
     }
 }
 
