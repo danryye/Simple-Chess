@@ -91,49 +91,49 @@ public class Board
     private void setUpBoard()
     {
         //Pawns
-        gameBoard[1][0] = new Piece(Piece.BLACK, Piece.PAWN);
-        gameBoard[1][1] = new Piece(Piece.BLACK, Piece.PAWN);
-        gameBoard[1][2] = new Piece(Piece.BLACK, Piece.PAWN);
-        gameBoard[1][3] = new Piece(Piece.BLACK, Piece.PAWN);
-        gameBoard[1][4] = new Piece(Piece.BLACK, Piece.PAWN);
-        gameBoard[1][5] = new Piece(Piece.BLACK, Piece.PAWN);
-        gameBoard[1][6] = new Piece(Piece.BLACK, Piece.PAWN);
-        gameBoard[1][7] = new Piece(Piece.BLACK, Piece.PAWN);
+        gameBoard[1][0] = new Pawn(Piece.BLACK);
+        gameBoard[1][1] = new Pawn(Piece.BLACK);
+        gameBoard[1][2] = new Pawn(Piece.BLACK);
+        gameBoard[1][3] = new Pawn(Piece.BLACK);
+        gameBoard[1][4] = new Pawn(Piece.BLACK);
+        gameBoard[1][5] = new Pawn(Piece.BLACK);
+        gameBoard[1][6] = new Pawn(Piece.BLACK);
+        gameBoard[1][7] = new Pawn(Piece.BLACK);
         
-        gameBoard[6][0] = new Piece(Piece.WHITE, Piece.PAWN);
-        gameBoard[6][1] = new Piece(Piece.WHITE, Piece.PAWN);
-        gameBoard[6][2] = new Piece(Piece.WHITE, Piece.PAWN);
-        gameBoard[6][3] = new Piece(Piece.WHITE, Piece.PAWN);
-        gameBoard[6][4] = new Piece(Piece.WHITE, Piece.PAWN);
-        gameBoard[6][5] = new Piece(Piece.WHITE, Piece.PAWN);
-        gameBoard[6][6] = new Piece(Piece.WHITE, Piece.PAWN);
-        gameBoard[6][7] = new Piece(Piece.WHITE, Piece.PAWN);
+        gameBoard[6][0] = new Pawn(Piece.WHITE);
+        gameBoard[6][1] = new Pawn(Piece.WHITE);
+        gameBoard[6][2] = new Pawn(Piece.WHITE);
+        gameBoard[6][3] = new Pawn(Piece.WHITE);
+        gameBoard[6][4] = new Pawn(Piece.WHITE);
+        gameBoard[6][5] = new Pawn(Piece.WHITE);
+        gameBoard[6][6] = new Pawn(Piece.WHITE);
+        gameBoard[6][7] = new Pawn(Piece.WHITE);
         //Rooks
-        gameBoard[0][0] = new Piece(Piece.BLACK, Piece.ROOK);
-        gameBoard[0][7] = new Piece(Piece.BLACK, Piece.ROOK);
+        gameBoard[0][0] = new Rook(Piece.BLACK);
+        gameBoard[0][7] = new Rook(Piece.BLACK);
         
-        gameBoard[7][0] = new Piece(Piece.WHITE, Piece.ROOK);
-        gameBoard[7][7] = new Piece(Piece.WHITE, Piece.ROOK);
+        gameBoard[7][0] = new Rook(Piece.WHITE);
+        gameBoard[7][7] = new Rook(Piece.WHITE);
         //Knights
-        gameBoard[0][1] = new Piece(Piece.BLACK, Piece.KNIGHT);
-        gameBoard[0][6] = new Piece(Piece.BLACK, Piece.KNIGHT);
+        gameBoard[0][1] = new Knight(Piece.BLACK);
+        gameBoard[0][6] = new Knight(Piece.BLACK);
         
-        gameBoard[7][1] = new Piece(Piece.WHITE, Piece.KNIGHT);
-        gameBoard[7][6] = new Piece(Piece.WHITE, Piece.KNIGHT);
+        gameBoard[7][1] = new Knight(Piece.WHITE);
+        gameBoard[7][6] = new Knight(Piece.WHITE);
         //Bishops
-        gameBoard[0][2] = new Piece(Piece.BLACK, Piece.BISHOP);
-        gameBoard[0][5] = new Piece(Piece.BLACK, Piece.BISHOP);
+        gameBoard[0][2] = new Bishop(Piece.BLACK);
+        gameBoard[0][5] = new Bishop(Piece.BLACK);
         
-        gameBoard[7][2] = new Piece(Piece.WHITE, Piece.BISHOP);
-        gameBoard[7][5] = new Piece(Piece.WHITE, Piece.BISHOP);
+        gameBoard[7][2] = new Bishop(Piece.WHITE);
+        gameBoard[7][5] = new Bishop(Piece.WHITE);
         //Queens
-        gameBoard[0][3] = new Piece(Piece.BLACK, Piece.QUEEN);
+        gameBoard[0][3] = new Queen(Piece.BLACK);
 
-        gameBoard[7][3] = new Piece(Piece.WHITE, Piece.QUEEN);
+        gameBoard[7][3] = new Queen(Piece.WHITE);
         //Kings
-        gameBoard[0][4] = new Piece(Piece.BLACK, Piece.KING);
+        gameBoard[0][4] = new King(Piece.BLACK);
 
-        gameBoard[7][4] = new Piece(Piece.WHITE, Piece.KING);
+        gameBoard[7][4] = new Piece(Piece.WHITE);
     }
     
     public int getTurn()
